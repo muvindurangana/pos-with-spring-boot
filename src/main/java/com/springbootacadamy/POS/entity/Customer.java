@@ -1,7 +1,5 @@
 package com.springbootacadamy.POS.entity;
 
-;
-
 import com.vladmihalcea.hibernate.type.json.JsonType;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
@@ -9,6 +7,9 @@ import org.hibernate.annotations.TypeDefs;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Set;
+
+;
 
 @Entity
 @Table(name="customer")
@@ -42,6 +43,11 @@ public class Customer {
 
     @Column(name = "active_state",columnDefinition = "TINYINT default 1")
     private boolean activeState;
+
+
+    @OneToMany(mappedBy="customer")
+    private Set<Orders> ordersList;
+
 
     public Customer() {
 

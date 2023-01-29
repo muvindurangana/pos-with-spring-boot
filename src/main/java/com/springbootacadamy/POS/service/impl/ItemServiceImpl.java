@@ -9,18 +9,13 @@ import com.springbootacadamy.POS.repo.ItemRepository;
 import com.springbootacadamy.POS.service.ItemService;
 import com.springbootacadamy.POS.util.mapper.ItemMapper;
 import org.modelmapper.ModelMapper;
-import org.modelmapper.TypeToken;
-import org.omg.CosNaming.NamingContextPackage.NotFound;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
-import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
-import javax.naming.NameNotFoundException;
 import java.util.List;
-import java.util.NoSuchElementException;
 
 @Service
 public class ItemServiceImpl implements ItemService {
